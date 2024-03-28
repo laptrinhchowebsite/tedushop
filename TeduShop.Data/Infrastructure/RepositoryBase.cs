@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,9 +6,10 @@ using System.Linq.Expressions;
 
 namespace TeduShop.Data.Infrastructure
 {
-    public abstract class RepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         #region Properties
+
         private TeduShopDbContext dataContext;
         private readonly IDbSet<T> dbSet;
 
@@ -23,7 +23,8 @@ namespace TeduShop.Data.Infrastructure
         {
             get { return dataContext ?? (dataContext = DbFactory.Init()); }
         }
-        #endregion
+
+        #endregion Properties
 
         protected RepositoryBase(IDbFactory dbFactory)
         {
@@ -32,9 +33,10 @@ namespace TeduShop.Data.Infrastructure
         }
 
         #region Implementation
-        public virtual T Add(T entity)
+
+        public virtual void Add(T entity)
         {
-            return dbSet.Add(entity);
+            dbSet.Add(entity);
         }
 
         public virtual void Update(T entity)
@@ -43,15 +45,17 @@ namespace TeduShop.Data.Infrastructure
             dataContext.Entry(entity).State = EntityState.Modified;
         }
 
-        public virtual T Delete(T entity)
+        public virtual void Delete(T entity)
         {
-            return dbSet.Remove(entity);
+            dbSet.Remove(entity);
         }
+
         public virtual T Delete(int id)
         {
             var entity = dbSet.Find(id);
             return dbSet.Remove(entity);
         }
+
         public virtual void DeleteMulti(Expression<Func<T, bool>> where)
         {
             IEnumerable<T> objects = dbSet.Where<T>(where).AsEnumerable();
@@ -69,13 +73,12 @@ namespace TeduShop.Data.Infrastructure
             return dbSet.Where(where).ToList();
         }
 
-
         public virtual int Count(Expression<Func<T, bool>> where)
         {
             return dbSet.Count(where);
         }
 
-        public IEnumerable<T> GetAll(string[] includes = null)
+        public IQueryable<T> GetAll(string[] includes = null)
         {
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)
@@ -101,7 +104,7 @@ namespace TeduShop.Data.Infrastructure
             return dataContext.Set<T>().FirstOrDefault(expression);
         }
 
-        public virtual IEnumerable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null)
+        public virtual IQueryable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null)
         {
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)
@@ -115,7 +118,7 @@ namespace TeduShop.Data.Infrastructure
             return dataContext.Set<T>().Where<T>(predicate).AsQueryable<T>();
         }
 
-        public virtual IEnumerable<T> GetMultiPaging(Expression<Func<T, bool>> predicate, out int total, int index = 0, int size = 20, string[] includes = null)
+        public virtual IQueryable<T> GetMultiPaging(Expression<Func<T, bool>> predicate, out int total, int index = 0, int size = 20, string[] includes = null)
         {
             int skipCount = index * size;
             IQueryable<T> _resetSet;
@@ -142,6 +145,7 @@ namespace TeduShop.Data.Infrastructure
         {
             return dataContext.Set<T>().Count<T>(predicate) > 0;
         }
-        #endregion
+
+        #endregion Implementation
     }
 }
