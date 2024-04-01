@@ -1,0 +1,16 @@
+﻿using AutoMapper;
+using TeduShop.Web.Models;
+using TeduSop.Model.Models;
+
+namespace TeduShop.Web.Mappings
+{
+    public class AutoMapperConfiguation
+    {
+        public static void Configure()
+        {
+            Mapper.CreateMap<Post, PostViewModel>();
+            Mapper.CreateMap<PostCategory, PostCategoryViewModel>();
+            Mapper.CreateMap<Post, PostViewModel>();
+        }
+    }
+}
