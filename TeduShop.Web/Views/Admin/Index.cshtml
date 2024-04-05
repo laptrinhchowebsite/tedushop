@@ -14,9 +14,12 @@
 </head>
 <body>
     <div ng-controller="schoolController">
+        <div  tedu-shop-directive></div>
+        @*<tedu-shop-directive></tedu-shop-directive>*@
         <input type="number" ng-model="num" />value is  {{num}}
-        {{message}}
-        <button ng-click="checkNumber()">CheckNumber</button>
+        <br />
+
+        <button ng-click="checkNumber()">CheckNumber</button> {{message}}
 
     </div>
    
