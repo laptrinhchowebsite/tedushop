@@ -1,0 +1,54 @@
+{
+  "_from": "angular@1.5.5",
+  "_id": "angular@1.5.5",
+  "_inBundle": false,
+  "_integrity": "sha512-MaGqLcsTWknx1dZhTFhxhcTVpKA/QnawUQ5xMTX+ZQddBiZSCodi5vRWRGAblgw5cy8MJl0MPIJEviU7cUH2KQ==",
+  "_location": "/angular",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "angular@1.5.5",
+    "name": "angular",
+    "escapedName": "angular",
+    "rawSpec": "1.5.5",
+    "saveSpec": null,
+    "fetchSpec": "1.5.5"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "/angular-ui-router"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular/-/angular-1.5.5.tgz",
+  "_shasum": "678fdfd1c9c47368dd202c7fc8bb3bd4dba17c18",
+  "_spec": "angular@1.5.5",
+  "_where": "D:\\Learning\\TEDU\\Finally\\Source Code\\GitTedu\\TeduShop.Web",
+  "author": {
+    "name": "Angular Core Team",
+    "email": "angular-core+npm@google.com"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular.js/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": "For the actively supported Angular, see https://www.npmjs.com/package/@angular/core. AngularJS support has officially ended. For extended AngularJS support options, see https://goo.gle/angularjs-path-forward.",
+  "description": "HTML enhanced for web apps",
+  "homepage": "http://angularjs.org",
+  "keywords": [
+    "angular",
+    "framework",
+    "browser",
+    "client-side"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "angular",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular.js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.5.5"
+}
