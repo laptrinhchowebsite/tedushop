@@ -11,6 +11,11 @@ namespace TeduShop.Web.Mappings
             Mapper.CreateMap<Post, PostViewModel>();
             Mapper.CreateMap<PostCategory, PostCategoryViewModel>();
             Mapper.CreateMap<Post, PostViewModel>();
+
+            Mapper.CreateMap<Product,ProductViewModel>();
+            Mapper.CreateMap<ProductCategory, ProductCategoryViewModel>();
+            Mapper.CreateMap<ProductTag, ProductTagViewModel>();
+
         }
     }
 }
