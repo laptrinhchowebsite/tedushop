@@ -1,7 +1,7 @@
 ﻿<section class="content-header">
     <h1>
         Danh mục sản phẩm
-     </h1>
+    </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
         <li><a href="#">Sản phẩm</a></li>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                <button class="btn btn-success"  ui-sref="add_product_category">Thêm mới</button>
+                    <button class="btn btn-success" ui-sref="add_product_category">Thêm mới</button>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -53,7 +53,7 @@
 
                                 <td><span ng-class="{'badge bg-red':item.Status==false,'badge bg-green':item.Status==true}">{{item.Status | statusFilter}}</span></td>
                                 <td>
-                                    <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></button>
+                                    <button class="btn btn-sm btn-primary" ui-sref="edit_product_category({id:item.ID})"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                                 </td>
                             </tr>
@@ -72,4 +72,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
