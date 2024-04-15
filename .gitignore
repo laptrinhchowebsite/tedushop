@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+TeduShop.Web/UploadedFiles/_thumbs/
+TeduShop.Web/UploadedFiles/images/
