@@ -20,6 +20,12 @@
             $scope.product.Alias = commonService.getSeoTitle($scope.product.Name);
         }
 
+        $scope.GetSeoTitle = GetSeoTitle;
+
+        function GetSeoTitle() {
+            $scope.product.Alias = commonService.getSeoTitle($scope.product.Name);
+        }
+
 
         function AddProduct() {
 
