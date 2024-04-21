@@ -1,15 +1,15 @@
 ﻿(function (app) {
     app.controller('rootController', rootController);
 
-    rootController.$inject = ['$state', '$scope'];
+    rootController.$inject = ['$state', 'authData', 'loginService', '$scope', 'authenticationService'];
 
-    function rootController($state, $scope) {
+    function rootController($state, authData, loginService, $scope, authenticationService) {
         $scope.logOut = function () {
-            //loginService.logOut();
+            loginService.logOut();
             $state.go('login');
         }
-        //$scope.authentication = authData.authenticationData;
-        //$scope.sideBar = "/app/shared/views/sideBar.html";
-        //authenticationService.validateRequest();
+        $scope.authentication = authData.authenticationData;
+
+        authenticationService.validateRequest();
     }
 })(angular.module('tedushop'));
