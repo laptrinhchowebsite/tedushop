@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace TeduShop.Web.Infrastructure.Core
 {
     public class PaginationSet<T>
     {
         public int Page { set; get; }
+
         public int Count
         {
             get
@@ -18,6 +17,7 @@ namespace TeduShop.Web.Infrastructure.Core
 
         public int TotalPages { set; get; }
         public int TotalCount { set; get; }
+        public int MaxPage { set; get; }
 
         public IEnumerable<T> Items { set; get; }
     }
