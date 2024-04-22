@@ -58,7 +58,7 @@ namespace TeduShop.Web.Infrastructure.Extensions
             productCategory.ParentID = productCategoryVm.ParentID;
             productCategory.DisplayOrder = productCategoryVm.DisplayOrder;
             productCategory.Image = productCategoryVm.Image;
-            productCategory.HomeFlag = productCategoryVm.HotFlag;
+            productCategory.HomeFlag = productCategoryVm.HomeFlag;
 
             productCategory.CreatedDate = productCategoryVm.CreatedDate;
             productCategory.CreateBy = productCategoryVm.CreateBy;
@@ -83,6 +83,7 @@ namespace TeduShop.Web.Infrastructure.Extensions
             product.PromotionPrice = productVm.PromotionPrice;
             product.Warranty = productVm.Warranty;
             product.HomeFlag = productVm.HomeFlag;
+            product.HotFlag = productVm.HotFlag;
             product.ViewCount = productVm.ViewCount;
 
             product.CreatedDate = productVm.CreatedDate;
