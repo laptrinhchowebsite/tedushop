@@ -4750,7 +4750,13 @@
     <Content Include="Assets\admin\libs\ckeditor\styles.js" />
     <Content Include="Libs\CKFinder.dll" />
     <Content Include="tedushop.html" />
-    <Content Include="UploadedFiles\images\HoangAn_34.png" />
+    <Content Include="UploadedFiles\images\ba.jpg" />
+    <Content Include="UploadedFiles\images\bo.jpg" />
+    <Content Include="UploadedFiles\images\ch.jpg" />
+    <Content Include="UploadedFiles\images\pic11.jpg" />
+    <Content Include="UploadedFiles\images\pic13.jpg" />
+    <Content Include="UploadedFiles\images\s1.jpg" />
+    <Content Include="UploadedFiles\images\sh.jpg" />
     <Content Include="UploadedFiles\_thumbs\Images\HoangAn_34.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -4770,6 +4776,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="node_modules\" />
     <Folder Include="UploadedFiles\files\" />
+    <Folder Include="UploadedFiles\_thumbs\Files\" />
     <Folder Include="Views\About\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Post\" />
@@ -5188,6 +5195,7 @@
     <Content Include="Views\Shared\Category.cshtml" />
     <Content Include="Views\Product\Category.cshtml" />
     <Content Include="Views\Product\Search.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeduShop.Common\TeduShop.Common.csproj">
