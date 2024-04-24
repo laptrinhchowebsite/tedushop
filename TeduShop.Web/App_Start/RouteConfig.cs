@@ -12,12 +12,17 @@ namespace TeduShop.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.MapRoute(
+                name: "Contact",
+                url: "lien-he.html",
+                defaults: new { controller = "Contact", action = "Index", alias = UrlParameter.Optional },
+                namespaces: new string[] { "TeduShop.Web.Controllers" }
+            );
             routes.MapRoute(
                 name: "Page",
                 url: "trang/{alias}.html",
                 defaults: new { controller = "Page", action = "Index", alias = UrlParameter.Optional },
-                namespaces:new string[] { "TeduShop.Web.Controllers" }
+                namespaces: new string[] { "TeduShop.Web.Controllers" }
             );
             routes.MapRoute(
                 name: "Login",
