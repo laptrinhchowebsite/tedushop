@@ -96,6 +96,10 @@
     <Compile Include="Migrations\202404231237228_AddMoreQuantity.designer.cs">
       <DependentUpon>202404231237228_AddMoreQuantity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404240232230_AddProductTags.cs" />
+    <Compile Include="Migrations\202404240232230_AddProductTags.designer.cs">
+      <DependentUpon>202404240232230_AddProductTags.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
@@ -156,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404231237228_AddMoreQuantity.resx">
       <DependentUpon>202404231237228_AddMoreQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404240232230_AddProductTags.resx">
+      <DependentUpon>202404240232230_AddProductTags.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
