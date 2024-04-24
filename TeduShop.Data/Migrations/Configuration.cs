@@ -21,6 +21,7 @@
         {
             CreateProductCategorySample(context);
             CreateSlide(context);
+            CreatePage(context);
 
         }
         private void CreateUser(TeduShop.Data.TeduShopDbContext context)
@@ -94,5 +95,23 @@
             }
         }
 
+        private void CreatePage(TeduShopDbContext context)
+        {
+            if(context.Pages.Count() == 0)
+            {
+                var page = new Page()
+                {
+                    Name = "Giới thiệu",
+                    Alias = "gioi-thieu",                    
+                    Content = @"Nước hoa giá rẻ dành cho cả nam nữ với hương thơm tươi mới và ấn tượng. New Perfume 10ml mang hương thơm cây cỏ tự nhiên kết hợp với hương hoa nồng nàn, đặc tả những nốt hương gần gũi, tinh tế, tự tin và lôi cuốn. Hương đầu là nhóm quýt hồng, bạc hà, táo xanh, chanh. Tầng hương giữa xen lẫn hoa phong lan, quả mận, hoa diên vĩ, hổ phách. Lớp hương cuối là xạ hương, cây hoắc hương, cỏ Vetiver, địa y, tuyết tùng.
+                            Dung tích 10ml, độ tỏa hương: 3m, chai nước hoa dạng xịt. Độ lưu hương hơn 6 giờ trên da và 24 giờ trên vải. Phù hợp cho làm việc, công sở, gặp gỡ và hẹn hò. Tinh dầu nước hoa nguyên chất từ Paris, Pháp.",
+                    Status = true
+
+                };
+                context.Pages.Add(page);
+                context.SaveChanges();
+            }
+
+        }
     }
 }
