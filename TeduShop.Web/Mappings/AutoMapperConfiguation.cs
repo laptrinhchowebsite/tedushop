@@ -20,6 +20,7 @@ namespace TeduShop.Web.Mappings
             Mapper.CreateMap<Tag, TagViewModel>();
             Mapper.CreateMap<Page, PageViewModel>();
             Mapper.CreateMap<ContactDetail, ContactDetailViewModel>();
+            Mapper.CreateMap<Feedback, FeedbackViewModel>();
 
         }
     }
