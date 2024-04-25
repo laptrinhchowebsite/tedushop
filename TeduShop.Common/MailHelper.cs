@@ -38,22 +38,6 @@ namespace TeduShop.Common
                 smtpClient.Send(mail);
 
                 return true;
-
-                //MailMessage message = new MailMessage();
-                //message.From = new MailAddress("baotinsoft40@gmail.com");
-                //message.To.Add("roadtofinishwebsite@gmail.com");
-                //message.Subject = subject;
-                //message.IsBodyHtml = true;
-                //message.Body = body;
-                //using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587))
-                //{
-                //    smtpClient.UseDefaultCredentials = false;
-                //    smtpClient.Credentials = (ICredentialsByHost)new NetworkCredential("baotinsoft40@gmail.com", "zuvtjgqasskxocxk");
-                //    smtpClient.EnableSsl = true;
-                //    smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-                //    smtpClient.Send(message);
-                //}
-
             }
             catch (SmtpException smex)
             {
