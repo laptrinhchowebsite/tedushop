@@ -120,8 +120,20 @@
     <Compile Include="Migrations\202405020308251_AddCustomerEmail.designer.cs">
       <DependentUpon>202405020308251_AddCustomerEmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405020518454_RenameIdentity.cs" />
+    <Compile Include="Migrations\202405020518454_RenameIdentity.designer.cs">
+      <DependentUpon>202405020518454_RenameIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405020540071_AddGroupUser.cs" />
+    <Compile Include="Migrations\202405020540071_AddGroupUser.designer.cs">
+      <DependentUpon>202405020540071_AddGroupUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ApplicationGroupRepository.cs" />
+    <Compile Include="Repositories\ApplicationRoleGroupRepository.cs" />
+    <Compile Include="Repositories\ApplicationRoleRepository.cs" />
+    <Compile Include="Repositories\ApplicationUserGroupRepository.cs" />
     <Compile Include="Repositories\ContactDetailRepository.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
     <Compile Include="Repositories\FeedbackRepository.cs" />
@@ -200,6 +212,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405020308251_AddCustomerEmail.resx">
       <DependentUpon>202405020308251_AddCustomerEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405020518454_RenameIdentity.resx">
+      <DependentUpon>202405020518454_RenameIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405020540071_AddGroupUser.resx">
+      <DependentUpon>202405020540071_AddGroupUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
